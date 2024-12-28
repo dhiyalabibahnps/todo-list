@@ -3,6 +3,6 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/to-do-list/",
+  base: "/todo-list/",
   plugins: [react()],
 });
