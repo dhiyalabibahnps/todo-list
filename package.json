@@ -1,5 +1,5 @@
 {
-  "homepage": "https://anss2110.github.io/to-do-list",
+  "homepage": "https://anss2110.github.io/to-do-list/",
   "name": "to-do-list",
   "private": true,
   "version": "0.0.0",
@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "vite build",
+    "add-dist": "git add dist -f",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
