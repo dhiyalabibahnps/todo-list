@@ -1,11 +1,14 @@
 {
-  "name": "coba-react",
+  "homepage": "https://anss2110.github.io/to-do-list",
+  "name": "to-do-list",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write ."
