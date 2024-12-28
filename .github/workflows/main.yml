@@ -1,4 +1,4 @@
-name: Vite + React Deploy Workflow 
+name: Vite + React Deploy Workflow
 
 on:
   push:
@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-      
+
       - name: Setup Node
         uses: actions/setup-node@v3
 
       - name: Bun Install
         run: bun install
-      - name: Bun run build 
+
+      - name: Bun run build
         run: bun run build
 
       - name: Upload production-ready build files

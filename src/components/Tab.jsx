@@ -1,9 +1,9 @@
 export function Tab({ status, label, count, tabCurrent, onClick, key, tabs }) {
   const currentTab = (() => {
     if (tabCurrent === status) {
-      return "bg-yellow-400 text-black";
+      return "bg-fuchsia-300 text-black";
     } else {
-      return "bg-gray-200 text-black hover:bg-gray-400";
+      return "bg-gray-300 text-black hover:bg-gray-400";
     }
   })();
   return (

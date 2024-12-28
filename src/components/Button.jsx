@@ -3,13 +3,13 @@ export function Button({ onClick, children, type }) {
     let color = "";
     switch (type) {
       case "error":
-        color = "bg-red-400 hover:bg-red-500 text-white";
+        color = "bg-red-300 hover:bg-red-400 text-black";
         break;
       case "success":
-        color = "bg-green-400 hover:bg-green-500 text-black";
+        color = "bg-green-100 hover:bg-green-200 text-black";
         break;
       default:
-        color = "bg-amber-400 hover:bg-amber-500 text-black";
+        color = "bg-purple-100 hover:bg-purple-200 text-black";
         break;
     }
     return color;
@@ -23,5 +23,3 @@ export function Button({ onClick, children, type }) {
     </button>
   );
 }
-
-// className="bg-yellow-400 text-black font-bold py-2 px-4 border-4 border-black hover:bg-yellow-500 "
