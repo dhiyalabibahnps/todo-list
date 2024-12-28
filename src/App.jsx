@@ -10,18 +10,6 @@ function App() {
   const [filteredTasks, setFilteredTask] = useState([]);
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  {
-    /* {new Date().toLocaleDateString("id-ID", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    timeZoneName: "short",
-  })} */
-  }
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
@@ -47,6 +35,11 @@ function App() {
   const tabs = useMemo(
     () => [
       {
+        status: "all",
+        label: "Semua",
+        count: tasks?.length ?? 0,
+      },
+      {
         status: "open",
         label: "Belum Selesai",
         count: tasks?.filter?.((v) => v.completed === false).length ?? 0,
@@ -55,11 +48,6 @@ function App() {
         status: "closed",
         label: "Selesai",
         count: tasks?.filter?.((v) => v.completed === true).length ?? 0,
-      },
-      {
-        status: "all",
-        label: "Semua",
-        count: tasks?.length ?? 0,
       },
     ],
     [tasks]
